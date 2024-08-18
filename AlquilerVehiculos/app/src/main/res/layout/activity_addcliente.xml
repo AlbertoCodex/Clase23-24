@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- EditText formulario de cliente -->
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre"/>
+    <EditText
+        android:id="@+id/etApellidos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Apellidos"/>
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"/>
+    <EditText
+        android:id="@+id/etTelefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Telefono"/>
+    <EditText
+        android:id="@+id/etDni"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="DNI"/>
+    <EditText
+        android:id="@+id/etTarjeta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nº Tarjeta Crédito"/>
+    <EditText
+        android:id="@+id/etTarjetaFecha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Fecha de Expiración"/>
+    <EditText
+        android:id="@+id/etTarjetaCvv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="CVV"/>
+    <!-- Boton para agregar un nuevo cliente -->
+    <Button
+        android:id="@+id/bGuardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guardar Cliente"/>
+</LinearLayout>

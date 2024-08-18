@@ -1,0 +1,31 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: appdb
+      MYSQL_USER: nodeUser
+      MYSQL_PASSWORD: nodePassword
+      MYSQL_ROOT_PASSWORD: control1234
+      MYSQL_PORT: 3310
+    volumes:
+      - ./data:/var/lib/mysql
+    ports:
+      - "3310:3310"
+  node:
+    image: node:latest
+    build: 
+      context: ./
+      dockerfile: Dockerfile.txt
+    ports:
+      - "8080:8080"
+    depends_on:
+      - "mysql"
+    environment:
+      - DB_HOST=appdb:3310
+      - DB_USER=nodeUser
+      - DB_PASSWORD=nodePassword
+      - DB_NAME=appdb
+    volumes:
+      - ./www:/usr/bin/node
